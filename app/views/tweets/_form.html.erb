@@ -1,0 +1,8 @@
+<%= form_for @tweet, remote: true do |f| %>
+  <div class='form-group'>
+    <%= f.label :tweet_text %>
+    <%= f.text_field :tweet_text, class: 'form-control' %>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

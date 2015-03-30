@@ -1,0 +1,5 @@
+<%= form_for tweet do |f| %>
+  <%= f.label :complete, tweet.tweet_text %>
+  <%= link_to "(remove)", tweet, method: :delete,
+    data: {confirm: "Are you sure?"}, remote: true %>
+<% end %>
