@@ -1,1 +1,3 @@
 $('#edit_tweet_<%= @tweet.id %>').remove();
+
+$('#flash').html('<%= j render "layouts/notices" %>');

@@ -1,3 +1,5 @@
 $('#new_tweet').remove();
 $('#new_tweet_link').show();
-$('#current_tweets').append('<%= j render(@tweet) %>')
+$('#current_tweets').append('<%= j render(@tweet) %>');
+
+$('#flash').html('<%= j render "layouts/notices" %>');
