@@ -21,4 +21,18 @@ describe 'the add a new tweet process' do
     click_on 'Create Tweet'
     expect(page).to have_content 'Error'
   end
+
+  it 'deletes a tweet', js: true do
+    visit tweets_path
+    click_on 'New Tweet'
+    fill_in 'Tweet text', with: 'Fiddle-dee-dee'
+    click_on 'Create Tweet'
+    click_on 'remove'
+
+    # accept_alert do
+    #   click_link 'Are you sure?'
+    # end
+    # first(:link, '(remove)').click
+    expect(page).to have_content 'successfully deleted!'
+  end
 end
